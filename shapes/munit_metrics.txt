@@ -1,0 +1,16 @@
+Results for shapes:
+Q_trans = 0.9493 
+Content Preservation = 0.4817 
+A2B Style translation = 0.7638 
+B2A Style translation = 0.9974 
+Style translation = 0.8806 
+Model Bias = 0.0512 
+Disentanglement quality = 0.6811 
+Correct attribute change = 0.6749 
+Detailed results: 
+A2B Style manipulation quality = {'size': '0.8813', 'orientation': '0.6463'} 
+B2A Style manipulation quality = {'floor_hue': '0.9964', 'wall_hue': '0.9985'} 
+Content preservation quality = {'object_hue': '0.0008', 'shape': '0.9625'} 
+A2B Translation quality = {'floor_hue': '1.0000', 'wall_hue': '1.0000'} 
+B2A Translation quality = {'size': '0.9972', 'orientation': '0.7998'} 
+Bias stats = {'floor_hue': '0.0000', 'wall_hue': '0.0000', 'object_hue': '0.0022', 'size': '0.1415', 'shape': '0.0379', 'orientation': '0.1764', 'domain': '0.0000'} 

@@ -14,10 +14,15 @@ Winter Conference on Applications of Computer Vision (WACV) 2022 </br>
   <img src="https://cs-people.bu.edu/dbash/img/i2i_eval.png" />
 </p>
 
-### Downloading evaluation data
+## Downloading evaluation data
 
 Proposed dataset splits are currently hosted on google drive [[link]](https://drive.google.com/drive/folders/1ELLH74aD9AMyHcU6jbGhRfC5s1lGJ7pz?usp=sharing). We will provide a `wget`-able links shortly. For CelebA and Shapes3D we provide image ids that can be used to generate splits using original datasets: [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), [Shapes3D](https://github.com/deepmind/3d-shapes). For the SynAction split we provide original images.
 
-### Instructions to reproduce results
+## Instructions to reproduce results
+### Requirements
+<ul>
+  <li>python 3.8+</li>
+  <li>Tensorflow 2.2</li>
+  <li>pillow 8.1</li>
+</ul>
 
-TDB
