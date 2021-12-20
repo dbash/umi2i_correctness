@@ -26,3 +26,28 @@ Proposed dataset splits are currently hosted on google drive [[link]](https://dr
   <li>pillow 8.1</li>
 </ul>
 
+### Attribute prediction
+You can find the checkpoints for the attribute prediction models [here](https://drive.google.com/drive/folders/12K3a_lBMPa6Z1xdjnsJpt_z-pvCMQTn8?usp=sharing). 
+To predict the attributes of the translation examples in a particular folder, please use the following command. Please note that all translation images
+must be named in the format *contentname_guidancename_.png*, e.g., `0123_4567_.png` if it was translated from content image `0123.png` with the guidance image `4567.png`. 
+Here is an example for the attribute prediction of a method trained on the 3DShapes dataset: 
+
+```(python)
+ python shapes/predict_dshapes.py --data_dir /path/to/translation/results/ --out_file ./translation_attrs.txt --ckpt_dir /path/to/corresponding/checkpoints/
+```
+Alternatively, the attribute predictors can be trained from scratch with the following command:
+```(python)
+ python shapes/predict_dshapes.py --data_dir /path/to/translation/results/ --out_file ./translation_attrs.txt --ckpt_dir /path/to/corresponding/checkpoints/ \
+    --train_predictors True --train_data /path/to/original/images/ --train_attributes /path/to/GT/attributes.txt
+```
+
+### How to compute metrics
+For a given attribute prediction file, please use the following command to compute the image translation metrics:
+
+```
+python compute_metrics.py --method_attr_file /path/to/predicted/attributes.txt --original_attr_file DATASET/original_attributes.txt --out_file DATASET/metrics.txt --dataset DATASET
+```
+where `DATASET` can be one of `shapes`, `synaction`, `celeba`.  For example, for the 3DShapes experiment with DRIT++ and the precomputed attributes in `shapes/drit_attrs.txt`,  the command will be:
+```
+python compute_metrics.py --method_attr_file shapes/drit_attrs.txt --original_attr_file shapes/original_attributes.txt --out_file shapes/drit_metrics.txt --dataset shapes
+```
