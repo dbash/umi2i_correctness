@@ -1,0 +1,16 @@
+Results for synaction:
+Q_trans = 0.9407 
+Content Preservation = 0.4984 
+A2B Style translation = 0.2838 
+B2A Style translation = 0.9718 
+Style translation = 0.6278 
+Model Bias = 0.3611 
+Disentanglement quality = 0.5631 
+Correct attribute change = 0.7828 
+Detailed results: 
+A2B Style manipulation quality = {'Identity': '0.2838'} 
+B2A Style manipulation quality = {'Background': '0.9718'} 
+Content preservation quality = {'Pose_content': '0.4984'} 
+A2B Translation quality = {'Background': '0.9998'} 
+B2A Translation quality = {'Identity': '0.8816'} 
+Bias stats = {'Identity': '0.7500', 'Background': '0.3333', 'Pose_content': '0.0000'} 

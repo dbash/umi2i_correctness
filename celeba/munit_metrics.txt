@@ -1,0 +1,16 @@
+Results for celeba:
+Q_trans = 0.7862 
+Content Preservation = 0.5280 
+A2B Style translation = 0.4490 
+B2A Style translation = 0.2373 
+Style translation = 0.3432 
+Model Bias = 0.1160 
+Disentanglement quality = 0.4356 
+Correct attribute change = 0.6227 
+Detailed results: 
+A2B Style manipulation quality = {'Black_Hair': '0.8789', 'Blond_Hair': '0.3908', 'Brown_Hair': '0.0773'} 
+B2A Style manipulation quality = {'Goatee': '0.0017', 'Heavy_Makeup': '0.9822', 'Mustache': '0.0005', 'No_Beard': '0.0554', 'Sideburns': '0.0013', 'Smiling': '0.4565', 'Young': '0.1635'} 
+Content preservation quality = {'5_o_Clock_Shadow': '0.4984', 'Arched_Eyebrows': '0.4093', 'Bags_Under_Eyes': '0.4969', 'Big_Lips': '0.5001', 'Big_Nose': '0.5002', 'Blurry': '0.6032', 'Bushy_Eyebrows': '0.4521', 'Chubby': '0.5057', 'Double_Chin': '0.4992', 'Eyeglasses': '0.8516', 'High_Cheekbones': '0.4968', 'Narrow_Eyes': '0.5438', 'Oval_Face': '0.4374', 'Pale_Skin': '0.4929', 'Pointy_Nose': '0.5684', 'Straight_Hair': '0.5067', 'Wavy_Hair': '0.4968', 'Wearing_Hat': '0.6450'} 
+A2B Translation quality = {'Goatee': '0.9780', 'Heavy_Makeup': '0.4892', 'Mustache': '0.9885', 'No_Beard': '0.9567', 'Sideburns': '0.9935', 'Smiling': '0.4441', 'Young': '0.8611', 'Male': '0.9480'} 
+B2A Translation quality = {'Black_Hair': '0.2479', 'Blond_Hair': '0.9942', 'Brown_Hair': '0.9970', 'Male': '0.7206'} 
+Bias stats = {'5_o_Clock_Shadow': '0.0010', 'Arched_Eyebrows': '0.2110', 'Attractive': '0.4217', 'Bags_Under_Eyes': '0.0117', 'Bald': '0.0003', 'Bangs': '0.0186', 'Big_Lips': '0.0490', 'Big_Nose': '0.0698', 'Black_Hair': '0.3498', 'Blond_Hair': '0.0118', 'Blurry': '0.5046', 'Brown_Hair': '0.0108', 'Bushy_Eyebrows': '0.1292', 'Chubby': '0.0006', 'Double_Chin': '0.0001', 'Eyeglasses': '0.0038', 'Goatee': '0.0009', 'Gray_Hair': '0.0001', 'Heavy_Makeup': '0.2837', 'High_Cheekbones': '0.5148', 'Male': '0.3832', 'Mouth_Slightly_Open': '0.2477', 'Mustache': '0.0005', 'Narrow_Eyes': '0.0109', 'No_Beard': '0.0276', 'Oval_Face': '0.2411', 'Pale_Skin': '0.0080', 'Pointy_Nose': '0.1261', 'Receding_Hairline': '0.0373', 'Rosy_Cheeks': '0.0006', 'Sideburns': '0.0001', 'Smiling': '0.2583', 'Straight_Hair': '0.0821', 'Wavy_Hair': '0.0773', 'Wearing_Earrings': '0.0096', 'Wearing_Hat': '0.0012', 'Wearing_Lipstick': '0.5002', 'Wearing_Necklace': '0.0007', 'Wearing_Necktie': '0.0014', 'Young': '0.0314'} 

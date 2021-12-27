@@ -93,11 +93,11 @@ def get_celeba_spec():
                             'Straight_Hair', 'Wavy_Hair', 'Wearing_Hat'}
     domain_attr = "Male"
     a_style_list = [CELEBA_ATTR_LIST.index(x) for x in list(male_style_attributes.keys())]
-    
+
     b_style_list = [CELEBA_ATTR_LIST.index(x) for x in list(female_style_attributes.keys())]
     domain_attr_idx = CELEBA_ATTR_LIST.index(domain_attr)
     style_list = a_style_list + b_style_list 
-    
+    spec["domain_attr_idx"] = domain_attr_idx
     spec["a_style_mask"] = np.zeros(len(CELEBA_ATTR_LIST))
     spec["a_style_mask"][a_style_list] = 1.
     spec["b_style_mask"] = np.zeros(len(CELEBA_ATTR_LIST))
@@ -121,7 +121,7 @@ def get_synaction_spec():
     spec["content_mask"] = np.array([0, 0, 1])
     spec["a_style_mask"] = np.array([0, 1, 0])
     spec["b_style_mask"] = np.array([1, 0, 0])
-    style_mask = a_style_mask + b_style_mask
+
     spec["a_fixed_attrs"] = np.array([0, 0, 0])
     spec["b_fixed_attrs"] = np.array([0, 0, 0])
     spec["domain_attr_idx"] = 0
@@ -143,8 +143,8 @@ def get_spec(dataset: str, ignore_splitting_attr: bool = False):
     a_fixed_list = spec["b_style_list"].copy() 
     b_fixed_list = spec["a_style_list"].copy() 
     if not ignore_splitting_attr:
-        a_fixed_list += [spec["domain_attr_idx"]]
-        b_fixed_list += [spec["domain_attr_idx"]]
+        a_fixed_list = list(a_fixed_list) + [spec["domain_attr_idx"],]
+        b_fixed_list = list(b_fixed_list) + [spec["domain_attr_idx"],]
     spec["a_fixed_list"] = a_fixed_list
     spec["b_fixed_list"] = b_fixed_list
     return spec

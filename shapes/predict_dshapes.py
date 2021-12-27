@@ -230,7 +230,7 @@ def save_attr_predictions_to_file(
             predictions = predict_all_attrs(img, models)
             pred_string = " ".join([bname] + [str(int(x)) for x in predictions] + [str(2), '\n'])
             out_fl.write(pred_string)
-    print("Finished saving predictions tp %s." % out_fpath)
+    print("Finished saving predictions to %s." % out_fpath)
         
 
 def main():
