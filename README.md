@@ -40,7 +40,17 @@ Alternatively, the attribute predictors can be trained from scratch with the fol
  python shapes/predict_dshapes.py --data_dir /path/to/translation/results/ --out_file ./translation_attrs.txt --ckpt_dir /path/to/corresponding/checkpoints/ \
     --train_predictors True --train_data /path/to/original/images/ --train_attributes /path/to/GT/attributes.txt
 ```
+For Synaction attribute prediction, you need to specify the files containing the predicted body poses as well. So, for Synaction, the command should look like:
 
+```(python)
+python synaction/predict_synaction.py --data_dir /path/to/translation/results/ --out_file ./translation_attrs.txt --ckpt_dir /path/to/corresponding/checkpoints/ \
+    --original_poses_file /path/to/original/data/poses/file.txt --translated_poses_file /path/to/translated/data/poses/file.txt
+```
+### How to predict poses
+To predict the poses for all images in a given folder for Synaction, please use the following command:
+```(python)
+python synaction/detect_pose_folder.py '/path/to/images/*.png' /output/poses/file.txt
+```
 ### How to compute metrics
 For a given attribute prediction file, please use the following command to compute the image translation metrics:
 
