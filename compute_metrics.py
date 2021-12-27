@@ -39,7 +39,6 @@ def format_line_celeba(ln):
 def format_line_synaction(ln):
   str_arr = ln.split(" ")
   bname = os.path.basename(str_arr[0])
-  int(bname[:10])
   attr_arr = np.zeros(3)
   # for i in range(3):
   #   attr_arr[i] = int(str_arr[i+1])

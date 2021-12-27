@@ -255,7 +255,7 @@ def main():
             ' train_predictors=True')
         train_data, val_data = get_trainval_datasets(args.train_data)
         train_all_models(
-            models, processors, args.ckpt_dir, train_data.take(100), val_data.take(100))
+            models, processors, args.ckpt_dir, train_data, val_data)
     else:
         if args.ckpt_dir is None:
             raise ValueError("Checkpoint directory must be specified.")
